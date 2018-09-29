@@ -179,3 +179,14 @@ def player_stats(name)
     end
   end
 end
+
+def big_shoe_rebounds
+  hash = game_hash
+  hash.keys.each do |key|
+    hash[key][:players].keys.each do |player|
+        return hash[key][:players][player][:points]
+      end
+    end
+  end
+end
+end
