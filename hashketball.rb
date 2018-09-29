@@ -121,7 +121,7 @@ def num_points_scored(name)
   hash.keys.each do |key|
     hash[key][:players].keys.each do |player|
       if player == name
-        return hash[key][:players][player]["Points"]
+        return hash[key][:players][player]["points"]
       end
     end
   end
@@ -132,7 +132,7 @@ def shoe_size(name)
   hash.keys.each do |key|
     hash[key][:players].keys.each do |player|
       if player == name
-        return hash[key][:players][player]["Shoe"]
+        return hash[key][:players][player]["shoe"]
       end
     end
   end
@@ -162,7 +162,7 @@ def player_numbers(name)
   hash.keys.each do |key|
     if hash[key][:team_name] == name
       hash[key][:players].keys.each do |player|
-        numbers.push(hash[key][:players][player]["Number"])
+        numbers.push(hash[key][:players][player]["number"])
       end
     end
   end
