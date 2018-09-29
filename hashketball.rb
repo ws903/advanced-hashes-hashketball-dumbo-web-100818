@@ -169,12 +169,12 @@ def player_numbers(name)
   return numbers
 end
 
-def num_points_scored(name)
+def player_stats(name)
   hash = game_hash
   hash.keys.each do |key|
     hash[key][:players].keys.each do |player|
       if player == name
-        return hash[key][:players][player]["Points"]
+        return hash[key][:players][player]
       end
     end
   end
