@@ -148,3 +148,10 @@ def team_colors(name)
 end
 
 def team_names
+  hash = game_hash
+  teams = []
+  hash.keys.each do |key|
+    teams.push(hash[key][:team_name])
+  end
+  teams
+end
