@@ -182,9 +182,13 @@ end
 
 def big_shoe_rebounds
   hash = game_hash
+  biggest = 0
+  rebounds = 0
   hash.keys.each do |key|
     hash[key][:players].keys.each do |player|
-        return hash[key][:players][player][:points]
+      if hash[key][:players][player][:shoe] > biggest
+        biggest = hash[key][:players][player][:shoe]
+        rebounds = hash[key][:players][player][:rebounds]
       end
     end
   end
